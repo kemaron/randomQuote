@@ -12,16 +12,11 @@ function getQuote() {
 
 function createTweet(input) {
     var data = input[0];
-    console.log ('data: ' + data);
 
     var dataElement = document.createElement('div');
-    console.log ('dataElement: ' + dataElement);
     dataElement.innerHTML = data.content;
-    console.log ('dataContent: ' + data.content);
     var quoteText = dataElement.innerText.trim();
-    console.log ('quoteText: ' + dataElement);
     var quoteAuthor = data.title;
-    console.log ('quoteAuthor: ' + quoteAuthor);
 
     if (!quoteAuthor.length) {
         quoteAuthor = "Unknown author";
@@ -44,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
         getQuote();
     });
 });
+
+
 
 /*
 console.log (fetch(quoteUrl, { cache: "no-store" })
